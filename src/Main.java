@@ -8,14 +8,14 @@ public class Main {
         System.out.println("3:データの取り出し");
         System.out.println("4:終了");
         Scanner scanner = new Scanner(System.in);
-        int procces_number;
-        procces_number = scanner.nextInt();
-        if (procces_number < 1 && 4 < procces_number) {
+        int process_number;
+        process_number = scanner.nextInt();
+        if (process_number < 1 || 4 < process_number) {
             System.out.println("1~4の整数を入力してください");
         }
         else {
-            Logic mian_logic = new Logic(procces_number);
-
+            Logic main_logic = new Logic(process_number);
+            main_logic.choose_process();
         }
     }
 }
