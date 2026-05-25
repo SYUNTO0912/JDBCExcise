@@ -74,7 +74,8 @@ public class Dao {
     }
 
     public void finish() {
-
+        System.out.println("終了します");
+        System.exit(0);
     }
 
 
