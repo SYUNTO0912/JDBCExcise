@@ -33,10 +33,13 @@ public class Dao {
         return viewData();
     }
 
-    public ArrayList<EmployeeEntity> deleteData() {
-        ArrayList<EmployeeEntity> list = new ArrayList<>();
+    public ArrayList<EmployeeEntity> deleteData() throws SQLException {
+        String sql = "delete from employee where employee_id = ?";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setInt(1,3);
+        stmt.executeUpdate();
 
-        return list;
+        return viewData();
     }
 
     public ArrayList<EmployeeEntity> viewData() {
